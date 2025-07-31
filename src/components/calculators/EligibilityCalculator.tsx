@@ -70,7 +70,7 @@ export default function EligibilityCalculator() {
       case 'jubilacion':
         return {
           description: 'Pensión por cese en la actividad laboral por edad',
-          periods: 'Período 1: Solo ordinaria (no anticipada voluntaria) | Período 2: Todas las jubilaciones'
+          periods: 'Período 1: Todas excepto anticipada voluntaria) | Período 2: Todas las jubilaciones'
         }
       case 'incapacidad':
         return {
