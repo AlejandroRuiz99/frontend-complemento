@@ -65,15 +65,15 @@ export default function CompareCalculator() {
     title: string,
     colorClass: string
   ) => (
-    <div className={`bg-gray-50 rounded-lg p-6 border-2 ${colorClass}`}>
-      <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center space-x-2">
-        <User className="w-5 h-5" />
+    <div className={`bg-dark-800/50 border-2 border-legal-gold/20 rounded-lg p-6`}>
+      <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+        <User className="w-5 h-5 text-legal-gold" />
         <span>{title}</span>
       </h4>
       
       <div className="space-y-4">
         <div>
-          <label htmlFor={`${progenitor}_name`} className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor={`${progenitor}_name`} className="block text-sm font-medium text-white mb-2">
             Nombre
           </label>
           <input
@@ -81,7 +81,7 @@ export default function CompareCalculator() {
             id={`${progenitor}_name`}
             value={formData[progenitor].name}
             onChange={(e) => handleInputChange(progenitor, 'name', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+            className="input-legal"
             placeholder="Nombre del progenitor"
             required
           />
@@ -89,14 +89,14 @@ export default function CompareCalculator() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor={`${progenitor}_pension_type`} className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor={`${progenitor}_pension_type`} className="block text-sm font-medium text-white mb-2">
               Tipo de Pensión
             </label>
             <select
               id={`${progenitor}_pension_type`}
               value={formData[progenitor].pension_type}
               onChange={(e) => handleInputChange(progenitor, 'pension_type', e.target.value as 'jubilacion' | 'incapacidad' | 'viudedad')}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="input-legal"
               required
             >
               <option value="jubilacion">Jubilación</option>
@@ -106,7 +106,7 @@ export default function CompareCalculator() {
           </div>
 
           <div>
-            <label htmlFor={`${progenitor}_num_children`} className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor={`${progenitor}_num_children`} className="block text-sm font-medium text-white mb-2">
               Número de Hijos
             </label>
             <input
@@ -116,7 +116,7 @@ export default function CompareCalculator() {
               max="10"
               value={formData[progenitor].num_children}
               onChange={(e) => handleInputChange(progenitor, 'num_children', parseInt(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="input-legal"
               required
             />
           </div>
@@ -124,7 +124,7 @@ export default function CompareCalculator() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor={`${progenitor}_start_date`} className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor={`${progenitor}_start_date`} className="block text-sm font-medium text-white mb-2">
               Fecha de Inicio de la Pensión
             </label>
             <input
@@ -132,13 +132,13 @@ export default function CompareCalculator() {
               id={`${progenitor}_start_date`}
               value={formData[progenitor].start_date}
               onChange={(e) => handleInputChange(progenitor, 'start_date', e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="input-legal"
               required
             />
           </div>
 
           <div>
-            <label htmlFor={`${progenitor}_pension_amount`} className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor={`${progenitor}_pension_amount`} className="block text-sm font-medium text-white mb-2">
               Importe de la Pensión (€)
             </label>
             <input
@@ -148,7 +148,7 @@ export default function CompareCalculator() {
               step="0.01"
               value={formData[progenitor].pension_amount}
               onChange={(e) => handleInputChange(progenitor, 'pension_amount', parseFloat(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="input-legal"
               placeholder="Ejemplo: 1200.50"
               required
             />
@@ -161,21 +161,21 @@ export default function CompareCalculator() {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
-          <Users className="w-6 h-6 text-purple-600" />
+        <div className="inline-flex items-center justify-center w-12 h-12 bg-legal-gold/10 border border-legal-gold/20 rounded-lg mb-4">
+          <Users className="w-6 h-6 text-legal-gold" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <h3 className="text-2xl font-bold text-white mb-2">
           Comparador de Progenitores
         </h3>
-        <p className="text-gray-600">
+        <p className="text-dark-300">
           Determina cuál de los progenitores tiene derecho al complemento
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {renderProgenitorForm('progenitor_1', 'Primer Progenitor', 'border-blue-200')}
-          {renderProgenitorForm('progenitor_2', 'Segundo Progenitor', 'border-green-200')}
+          {renderProgenitorForm('progenitor_1', 'Primer Progenitor', '')}
+          {renderProgenitorForm('progenitor_2', 'Segundo Progenitor', '')}
         </div>
 
         <motion.button
@@ -183,7 +183,7 @@ export default function CompareCalculator() {
           disabled={loading}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? 'Comparando...' : 'Comparar Progenitores'}
         </motion.button>
@@ -193,12 +193,12 @@ export default function CompareCalculator() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start space-x-3"
+          className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex items-start space-x-3"
         >
           <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
           <div>
-            <h4 className="text-sm font-medium text-red-800">Error en la comparación</h4>
-            <p className="text-sm text-red-600 mt-1">{error}</p>
+            <h4 className="text-sm font-medium text-red-400">Error en la comparación</h4>
+            <p className="text-sm text-red-300 mt-1">{error}</p>
           </div>
         </motion.div>
       )}
@@ -207,58 +207,58 @@ export default function CompareCalculator() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-purple-50 border border-purple-200 rounded-lg p-6"
+          className="bg-success-500/10 border border-success-500/20 rounded-xl p-6"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <CheckCircle className="w-6 h-6 text-purple-500" />
-            <h4 className="text-lg font-semibold text-purple-800">Resultado de la Comparación</h4>
+            <CheckCircle className="w-6 h-6 text-success-500" />
+            <h4 className="text-lg font-semibold text-success-400">Resultado de la Comparación</h4>
           </div>
 
-          <div className="mb-6 p-4 bg-white rounded-lg border border-purple-200">
+          <div className="mb-6 p-4 bg-dark-800/50 border border-legal-gold/20 rounded-lg">
             <div className="flex items-center space-x-2 mb-2">
-              <Crown className="w-6 h-6 text-yellow-500" />
-              <span className="text-lg font-semibold text-gray-900">Progenitor con Derecho:</span>
+              <Crown className="w-6 h-6 text-legal-gold" />
+              <span className="text-lg font-semibold text-white">Progenitor con Derecho:</span>
             </div>
-            <p className="text-2xl font-bold text-purple-600">
+            <p className="text-2xl font-bold text-legal-gold">
               {result.eligible_progenitor}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div className={`bg-white rounded-lg p-4 border-2 ${
-              result.progenitor_1.eligible ? 'border-green-300 bg-green-50' : 'border-gray-200'
+            <div className={`bg-dark-700/50 rounded-lg p-4 border-2 ${
+              result.progenitor_1.eligible ? 'border-legal-gold bg-legal-gold/10' : 'border-dark-600'
             }`}>
-              <h5 className="font-semibold text-gray-900 mb-3 flex items-center space-x-2">
-                <User className="w-5 h-5" />
+              <h5 className="font-semibold text-white mb-3 flex items-center space-x-2">
+                <User className="w-5 h-5 text-legal-gold" />
                 <span>{result.progenitor_1.name}</span>
-                {result.progenitor_1.eligible && <Crown className="w-4 h-4 text-yellow-500" />}
+                {result.progenitor_1.eligible && <Crown className="w-4 h-4 text-legal-gold" />}
               </h5>
               
               <div className="space-y-2">
-                <p className="text-sm">
+                <p className="text-sm text-dark-200">
                   <span className="font-medium">Elegible:</span> 
                   <span className={`ml-2 px-2 py-1 rounded text-xs font-medium ${
                     result.progenitor_1.eligible 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-red-100 text-red-800'
+                      ? 'bg-success-500/20 text-success-400' 
+                      : 'bg-red-500/20 text-red-400'
                   }`}>
                     {result.progenitor_1.eligible ? 'Sí' : 'No'}
                   </span>
                 </p>
                 
                 {result.progenitor_1.complement_amount && (
-                  <p className="text-sm">
+                  <p className="text-sm text-dark-200">
                     <span className="font-medium">Complemento:</span> 
-                    <span className="ml-2 font-bold text-green-600">
+                    <span className="ml-2 font-bold text-legal-gold">
                       {result.progenitor_1.complement_amount.toFixed(2)} €
                     </span>
                   </p>
                 )}
                 
                 {result.progenitor_1.total_pension && (
-                  <p className="text-sm">
+                  <p className="text-sm text-dark-200">
                     <span className="font-medium">Pensión Total:</span> 
-                    <span className="ml-2 font-bold">
+                    <span className="ml-2 font-bold text-white">
                       {result.progenitor_1.total_pension.toFixed(2)} €
                     </span>
                   </p>
@@ -266,40 +266,40 @@ export default function CompareCalculator() {
               </div>
             </div>
 
-            <div className={`bg-white rounded-lg p-4 border-2 ${
-              result.progenitor_2.eligible ? 'border-green-300 bg-green-50' : 'border-gray-200'
+            <div className={`bg-dark-700/50 rounded-lg p-4 border-2 ${
+              result.progenitor_2.eligible ? 'border-legal-gold bg-legal-gold/10' : 'border-dark-600'
             }`}>
-              <h5 className="font-semibold text-gray-900 mb-3 flex items-center space-x-2">
-                <User className="w-5 h-5" />
+              <h5 className="font-semibold text-white mb-3 flex items-center space-x-2">
+                <User className="w-5 h-5 text-legal-gold" />
                 <span>{result.progenitor_2.name}</span>
-                {result.progenitor_2.eligible && <Crown className="w-4 h-4 text-yellow-500" />}
+                {result.progenitor_2.eligible && <Crown className="w-4 h-4 text-legal-gold" />}
               </h5>
               
               <div className="space-y-2">
-                <p className="text-sm">
+                <p className="text-sm text-dark-200">
                   <span className="font-medium">Elegible:</span> 
                   <span className={`ml-2 px-2 py-1 rounded text-xs font-medium ${
                     result.progenitor_2.eligible 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-red-100 text-red-800'
+                      ? 'bg-success-500/20 text-success-400' 
+                      : 'bg-red-500/20 text-red-400'
                   }`}>
                     {result.progenitor_2.eligible ? 'Sí' : 'No'}
                   </span>
                 </p>
                 
                 {result.progenitor_2.complement_amount && (
-                  <p className="text-sm">
+                  <p className="text-sm text-dark-200">
                     <span className="font-medium">Complemento:</span> 
-                    <span className="ml-2 font-bold text-green-600">
+                    <span className="ml-2 font-bold text-legal-gold">
                       {result.progenitor_2.complement_amount.toFixed(2)} €
                     </span>
                   </p>
                 )}
                 
                 {result.progenitor_2.total_pension && (
-                  <p className="text-sm">
+                  <p className="text-sm text-dark-200">
                     <span className="font-medium">Pensión Total:</span> 
-                    <span className="ml-2 font-bold">
+                    <span className="ml-2 font-bold text-white">
                       {result.progenitor_2.total_pension.toFixed(2)} €
                     </span>
                   </p>
@@ -308,9 +308,9 @@ export default function CompareCalculator() {
             </div>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h5 className="font-semibold text-blue-900 mb-2">Explicación:</h5>
-            <p className="text-sm text-blue-800">{result.explanation}</p>
+          <div className="bg-legal-gold/10 border border-legal-gold/20 rounded-lg p-4">
+            <h5 className="font-semibold text-legal-gold mb-2">Explicación:</h5>
+            <p className="text-sm text-legal-gold">{result.explanation}</p>
           </div>
         </motion.div>
       )}

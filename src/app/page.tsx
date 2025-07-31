@@ -15,7 +15,7 @@ export default function Home() {
   const [apiStatus, setApiStatus] = useState<'checking' | 'connected' | 'error'>('checking')
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       {/* Header */}
       <Header />
       

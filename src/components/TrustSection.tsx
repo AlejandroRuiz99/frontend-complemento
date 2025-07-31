@@ -13,7 +13,7 @@ export default function TrustSection() {
     },
     {
       icon: Clock,
-      number: "5+",
+      number: "3+",
       label: "Años",
       description: "De experiencia legal"
     },
@@ -23,12 +23,6 @@ export default function TrustSection() {
       label: "Dedicación",
       description: "En cada caso"
     },
-    {
-      icon: Shield,
-      number: "100%",
-      label: "Garantía",
-      description: "En todos nuestros servicios"
-    }
   ]
 
   const benefits = [

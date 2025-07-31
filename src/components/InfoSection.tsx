@@ -42,11 +42,6 @@ export default function InfoSection() {
       content: 'Real Decreto-ley 3/2021 y disposiciones complementarias sobre el complemento de pensiones contributivas para la reducción de la brecha de género.'
     },
     {
-      icon: Shield,
-      title: 'Garantías',
-      content: 'Derecho reconocido por la Seguridad Social española. Los cálculos se basan en la normativa oficial vigente.'
-    },
-    {
       icon: Info,
       title: 'Importante',
       content: 'Esta herramienta tiene carácter orientativo. Para casos específicos, consulte con un profesional del derecho.'

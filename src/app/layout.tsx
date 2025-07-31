@@ -54,7 +54,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#d4af37" />
         <meta name="theme-color" content="#d4af37" />
       </head>
-      <body className="min-h-screen bg-legal-black font-sans antialiased">
+      <body className="bg-legal-black font-sans antialiased">
         <div className="bg-legal-pattern fixed inset-0 pointer-events-none" />
         <div className="relative z-10 bg-gradient-legal min-h-screen">
           {children}

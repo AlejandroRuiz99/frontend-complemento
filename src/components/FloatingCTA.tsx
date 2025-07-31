@@ -32,7 +32,7 @@ export default function FloatingCTA() {
         initial={{ opacity: 0, scale: 0, x: 20, y: 20 }}
         animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
         exit={{ opacity: 0, scale: 0, x: 20, y: 20 }}
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-6 right-6 z-50 mb-safe"
       >
         {!isExpanded ? (
           // Botón flotante compacto
@@ -43,7 +43,7 @@ export default function FloatingCTA() {
             className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 animate-pulse"
           >
             <MessageCircle className="w-6 h-6" />
-            <span className="hidden sm:inline font-medium">Consulta Gratis</span>
+            <span className="hidden sm:inline font-medium">Atención personalizada</span>
           </motion.button>
         ) : (
           // Tarjeta expandida

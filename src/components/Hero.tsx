@@ -168,15 +168,15 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-dark-400"
+            className="flex flex-col items-center text-dark-300 pointer-events-none"
           >
-            <span className="text-sm mb-2">Desliza para empezar</span>
-            <ArrowDown className="w-5 h-5" />
+            <span className="text-sm mb-2 font-medium tracking-wider">Desliza para empezar</span>
+            <ArrowDown className="w-5 h-5 opacity-75" />
           </motion.div>
         </motion.div>
       </div>

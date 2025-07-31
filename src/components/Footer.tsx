@@ -48,7 +48,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer id="contacto" className="bg-dark-950 border-t border-dark-800">
+    <footer id="contacto" className="bg-dark-950 border-t border-dark-800 relative z-10">
       <div className="container-legal">
         {/* Main Footer Content */}
         <div className="py-16">
