@@ -70,17 +70,17 @@ export default function EligibilityCalculator() {
       case 'jubilacion':
         return {
           description: 'Pensión por cese en la actividad laboral por edad',
-          periods: 'Válida en ambos períodos (con diferentes condiciones)'
+          periods: 'Período 1: Solo ordinaria (no anticipada voluntaria) | Período 2: Todas las jubilaciones'
         }
       case 'incapacidad':
         return {
           description: 'Pensión por incapacidad permanente',
-          periods: 'Solo válida desde el Período 2 (abril 2021)'
+          periods: 'Solo válida desde el Período 2 (febrero 2021)'
         }
       case 'viudedad':
         return {
           description: 'Pensión por fallecimiento del cónyuge',
-          periods: 'No elegible para el complemento de paternidad'
+          periods: 'Solo válida desde el Período 2 (febrero 2021)'
         }
       default:
         return { description: '', periods: '' }
@@ -102,7 +102,7 @@ export default function EligibilityCalculator() {
             {[
               { value: 'jubilacion', label: 'Jubilación', recommended: true },
               { value: 'incapacidad', label: 'Incapacidad' },
-              { value: 'viudedad', label: 'Viudedad', warning: true }
+              { value: 'viudedad', label: 'Viudedad' }
             ].map((option) => (
               <label
                 key={option.value}
@@ -300,15 +300,15 @@ export default function EligibilityCalculator() {
                       </h4>
                       {result.period === '1' ? (
                         <ul className="text-sm text-dark-200 space-y-1">
-                          <li>• Solo pensiones de jubilación</li>
+                          <li>• Solo pensiones de jubilación (excepto anticipadas voluntarias)</li>
                           <li>• Cálculo porcentual sobre la pensión</li>
-                          <li>• 2 hijos → 2%, 3 hijos → 3%, ≥4 hijos → 15%</li>
+                          <li>• 2 hijos → 5%, 3 hijos → 10%, ≥4 hijos → 15%</li>
                         </ul>
                       ) : (
                         <ul className="text-sm text-dark-200 space-y-1">
-                          <li>• Jubilación e incapacidad</li>
-                          <li>• Importe fijo: 35€ por hijo (máximo 4)</li>
-                          <li>• Solo un complemento si hay derecho a ambos</li>
+                          <li>• Todas las jubilaciones, incapacidad y viudedad</li>
+                          <li>• Importe fijo: 35,90€ por hijo (máximo 4)</li>
+                          <li>• Solo un complemento si hay derecho a ambos períodos</li>
                         </ul>
                       )}
                     </div>
