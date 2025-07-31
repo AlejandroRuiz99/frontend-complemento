@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Shield, CheckCircle, Users, MessageCircle, Calendar, ExternalLink } from 'lucide-react'
+import { Shield, CheckCircle, Users, MessageCircle, Calendar, ExternalLink } from 'lucide-react'
 
 export default function Hero() {
   const features = [
@@ -23,7 +23,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20">
+    <section className="relative min-h-screen flex items-center justify-center pt-28">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 opacity-90" />
       
@@ -163,22 +163,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-dark-300 pointer-events-none"
-          >
-            <span className="text-sm mb-2 font-medium tracking-wider">Desliza para empezar</span>
-            <ArrowDown className="w-5 h-5 opacity-75" />
-          </motion.div>
-        </motion.div>
+
       </div>
     </section>
   )

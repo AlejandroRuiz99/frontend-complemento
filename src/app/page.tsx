@@ -26,7 +26,7 @@ export default function Home() {
       <Hero />
       
       {/* Calculator Section */}
-      <section id="calculadora" className="section-legal">
+      <section id="calculadora" className="section-legal section-with-header-offset">
         <div className="container-legal">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

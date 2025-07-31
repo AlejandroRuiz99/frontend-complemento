@@ -139,6 +139,10 @@ body {
   .text-legal {
     @apply text-dark-200 leading-relaxed;
   }
+  
+  .section-with-header-offset {
+    scroll-margin-top: 6rem; /* 24 * 0.25rem = 6rem para compensar el header */
+  }
 }
 
 /* Estados de loading */

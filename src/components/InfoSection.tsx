@@ -49,7 +49,7 @@ export default function InfoSection() {
   ]
 
   return (
-    <section id="informacion" className="section-legal bg-dark-900/50">
+    <section id="informacion" className="section-legal bg-dark-900/50 section-with-header-offset">
       <div className="container-legal">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function InfoSection() {
         </motion.div>
 
         {/* Períodos */}
-        <div id="periodos" className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div id="periodos" className="grid lg:grid-cols-2 gap-8 mb-16 section-with-header-offset">
           {periods.map((period, index) => (
             <motion.div
               key={period.id}
@@ -137,7 +137,7 @@ export default function InfoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
         >
           {legalInfo.map((info, index) => (
             <motion.div
