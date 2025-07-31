@@ -126,11 +126,6 @@ export default function EligibilityCalculator() {
                         Recomendado
                       </span>
                     )}
-                    {option.warning && (
-                      <span className="ml-2 px-2 py-1 text-xs bg-red-500 text-white rounded-full">
-                        No elegible
-                      </span>
-                    )}
                   </div>
                 </div>
                 <div
