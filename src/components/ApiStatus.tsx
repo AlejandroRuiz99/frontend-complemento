@@ -44,7 +44,7 @@ export default function ApiStatus({ status, onStatusChange }: ApiStatusProps) {
       case 'connected':
         return {
           icon: CheckCircle,
-          text: 'Servicio conectado',
+          text: 'Servicio disponible',
           bgColor: 'bg-success-500/10',
           borderColor: 'border-success-500/20',
           textColor: 'text-success-400',
@@ -71,7 +71,7 @@ export default function ApiStatus({ status, onStatusChange }: ApiStatusProps) {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-20 right-4 z-40 px-4 py-2 rounded-lg border backdrop-blur-sm ${config.bgColor} ${config.borderColor}`}
+      className={`fixed top-24 right-4 z-40 px-4 py-2 rounded-lg border backdrop-blur-sm ${config.bgColor} ${config.borderColor}`}
     >
       <div className="flex items-center space-x-2">
         <config.icon 
