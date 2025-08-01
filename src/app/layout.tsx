@@ -84,9 +84,10 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Favicon principal */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Favicon principal - configuración múltiple para máxima compatibilidad */}
+        <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         
         {/* Theme colors */}
         <meta name="theme-color" content="#d4af37" />
