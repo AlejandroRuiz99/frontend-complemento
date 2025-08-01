@@ -28,8 +28,7 @@ export default function InfoSection() {
         'Jubilaciones, incapacidad y viudedad',
         'Importe fijo por hijo',
         '35,90€ por hijo (máximo 4)',
-        'Solo un complemento si hay derecho a ambos períodos',
-        'Derecho para uno de los dos progenitores'
+        'Solo tiene derecho al complemento uno de los dos progenitores'
       ],
       color: 'from-legal-gold to-legal-gold-dark'
     }
