@@ -65,8 +65,6 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-dark-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Donde empieza la defensa de tus{' '}
-            <span className="text-legal-gold font-semibold">derechos</span>.
             Herramienta profesional para determinar el importe que te corresponde
             según la normativa española vigente.
           </motion.p>

@@ -80,9 +80,8 @@ export default function Footer() {
               </div>
               
               <p className="text-dark-300 mb-6 leading-relaxed">
-                "Donde empieza la defensa de tus derechos". Especialistas en 
-                Derecho Laboral y Seguridad Social con amplia experiencia en 
-                complementos de paternidad.
+                Especialistas en Derecho Laboral y Seguridad Social con amplia 
+                experiencia en complementos de paternidad.
               </p>
 
               {/* Contact Info */}

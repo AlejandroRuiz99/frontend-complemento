@@ -70,17 +70,17 @@ export default function EligibilityCalculator() {
       case 'jubilacion':
         return {
           description: 'Pensión por cese en la actividad laboral por edad',
-          periods: 'Período 1: Todas excepto anticipada voluntaria) | Período 2: Todas las jubilaciones'
+          periods: 'Período 1: Todas excepto anticipada voluntaria | Período 2: Todas las jubilaciones'
         }
       case 'incapacidad':
         return {
           description: 'Pensión por incapacidad permanente',
-          periods: 'Solo válida desde el Período 2 (febrero 2021)'
+          periods: 'Período 1 y Período 2: Válida en ambos períodos'
         }
       case 'viudedad':
         return {
           description: 'Pensión por fallecimiento del cónyuge',
-          periods: 'Solo válida desde el Período 2 (febrero 2021)'
+          periods: 'Período 1 y Período 2: Válida en ambos períodos'
         }
       default:
         return { description: '', periods: '' }
@@ -204,7 +204,8 @@ export default function EligibilityCalculator() {
               <p className="mt-1 text-sm text-red-400">{errors.numChildren.message}</p>
             )}
             <p className="mt-1 text-xs text-dark-400">
-              Número total de hijos (máximo 4 para el cálculo)
+              Número total de hijos (máximo 4 para el cálculo)<br/>
+              <span className="text-yellow-400">⚠️ Período 1: Mínimo 2 hijos requeridos</span>
             </p>
           </div>
         </div>
@@ -295,7 +296,8 @@ export default function EligibilityCalculator() {
                       </h4>
                       {result.period === '1' ? (
                         <ul className="text-sm text-dark-200 space-y-1">
-                          <li>• Solo pensiones de jubilación (excepto anticipadas voluntarias)</li>
+                          <li>• Jubilaciones (excepto anticipada voluntaria), incapacidad y viudedad</li>
+                          <li>• <strong>Mínimo 2 hijos</strong> - No elegible con solo 1 hijo</li>
                           <li>• Cálculo porcentual sobre la pensión</li>
                           <li>• 2 hijos → 5%, 3 hijos → 10%, ≥4 hijos → 15%</li>
                         </ul>
@@ -303,7 +305,7 @@ export default function EligibilityCalculator() {
                         <ul className="text-sm text-dark-200 space-y-1">
                           <li>• Todas las jubilaciones, incapacidad y viudedad</li>
                           <li>• Importe fijo: 35,90€ por hijo (máximo 4)</li>
-                          <li>• Solo un complemento si hay derecho a ambos períodos</li>
+                          <li>• Solo tiene derecho al complemento uno de los dos progenitores</li>
                         </ul>
                       )}
                     </div>

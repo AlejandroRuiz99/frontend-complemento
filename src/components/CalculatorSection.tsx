@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Calculator, Search, TrendingUp, Users, ArrowRight } from 'lucide-react'
 import EligibilityCalculator from './calculators/EligibilityCalculator'
@@ -14,6 +14,34 @@ interface CalculatorSectionProps {
 
 export default function CalculatorSection({ apiStatus }: CalculatorSectionProps) {
   const [activeTab, setActiveTab] = useState('eligibility')
+  const calculatorContentRef = useRef<HTMLDivElement>(null)
+  
+  // Función para detectar si estamos en móvil
+  const isMobile = () => {
+    return window.innerWidth < 768 // Breakpoint md de Tailwind
+  }
+  
+  // Función para hacer scroll a la calculadora
+  const scrollToCalculator = () => {
+    if (isMobile() && calculatorContentRef.current) {
+      const headerHeight = 80 // Altura aproximada del header
+      const calculatorTop = calculatorContentRef.current.offsetTop
+      
+      window.scrollTo({
+        top: calculatorTop - headerHeight,
+        behavior: 'smooth'
+      })
+    }
+  }
+  
+  // Función para cambiar tab y hacer scroll si es móvil
+  const handleTabChange = (calculatorId: string) => {
+    setActiveTab(calculatorId)
+    // Usar setTimeout para esperar a que se renderice el nuevo contenido
+    setTimeout(() => {
+      scrollToCalculator()
+    }, 100)
+  }
 
   const calculators = [
     {
@@ -82,7 +110,7 @@ export default function CalculatorSection({ apiStatus }: CalculatorSectionProps)
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            onClick={() => setActiveTab(calculator.id)}
+            onClick={() => handleTabChange(calculator.id)}
             className={`p-6 rounded-xl border transition-all duration-300 text-left group ${
               activeTab === calculator.id
                 ? 'bg-legal-gold text-dark-900 border-legal-gold shadow-gold'
@@ -119,6 +147,7 @@ export default function CalculatorSection({ apiStatus }: CalculatorSectionProps)
 
       {/* Calculator Content */}
       <motion.div
+        ref={calculatorContentRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
