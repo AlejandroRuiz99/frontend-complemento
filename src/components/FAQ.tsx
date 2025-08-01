@@ -13,7 +13,7 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question: "¿Qué es el complemento de paternidad?",
-    answer: "El complemento de paternidad es una prestación económica adicional a la pensión que reconoce la aportación demográfica de las mujeres al sistema de Seguridad Social. Se otorga por cada hijo a uno de los dos progenitores.",
+    answer: "El complemento de paternidad es un incremento en la pensión de jubilación, incapacidad permanente o viudedad, destinado a compensar el impacto que la paternidad o maternidad ha tenido en la carrera profesional de los padres",
     category: "general"
   },
   {

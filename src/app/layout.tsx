@@ -84,13 +84,28 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        {/* Favicon y iconos de aplicación */}
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d4af37" />
+        
+        {/* Manifest y configuración de aplicación */}
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="application-name" content="Calcular Complemento" />
+        <meta name="apple-mobile-web-app-title" content="Calcular Complemento" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        {/* Microsoft tiles */}
         <meta name="msapplication-TileColor" content="#d4af37" />
+        <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* Theme colors */}
         <meta name="theme-color" content="#d4af37" />
+        <meta name="msapplication-navbutton-color" content="#d4af37" />
         
         {/* Preconnect para mejorar velocidad */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
