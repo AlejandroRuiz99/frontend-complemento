@@ -1,0 +1,37 @@
+# robots.txt para calcularcomplemento.com
+# Optimizado para SEO
+
+User-agent: *
+Allow: /
+
+# Archivos importantes para bots
+Allow: /sitemap.xml
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
+
+# Excluir archivos innecesarios
+Disallow: /_next/static/
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://calcularcomplemento.com/sitemap.xml
+
+# Tiempo de rastreo optimizado (10 segundos)
+Crawl-delay: 10
+
+# Directivas específicas para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# Directivas específicas para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+# Directivas específicas para Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 15
