@@ -11,7 +11,7 @@ export default function InfoSection() {
       dates: '01/01/2016 - 03/02/2021',
       icon: Calendar,
       features: [
-        'Solo pensiones de jubilación (excepto anticipadas voluntarias)',
+        'Pensiones de jubilación (excepto anticipadas voluntarias), incapacidad y viudedad',
         'Cálculo porcentual sobre la pensión',
         '2 hijos → 5% adicional',
         '3 hijos → 10% adicional',
@@ -25,7 +25,7 @@ export default function InfoSection() {
       dates: 'Desde 04/02/2021',
       icon: Euro,
       features: [
-        'Jubilaciones, incapacidad y viudedad',
+        'Jubilaciones (incluyendo anticipadas voluntarias), incapacidad y viudedad',
         'Importe fijo por hijo',
         '35,90€ por hijo (máximo 4)',
         'Solo tiene derecho al complemento uno de los dos progenitores'
