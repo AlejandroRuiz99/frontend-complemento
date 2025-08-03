@@ -24,6 +24,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
+            "@id": "https://calcularcomplemento.com/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
