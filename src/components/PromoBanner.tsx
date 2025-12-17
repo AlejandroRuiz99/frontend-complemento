@@ -42,7 +42,7 @@ export default function PromoBanner() {
   return (
     <>
       {/* Spacer para móvil (banner debajo del header) */}
-      <div className="sm:hidden h-[130px]" />
+      <div className="sm:hidden h-[138px]" />
       {/* Spacer para desktop */}
       <div className="hidden sm:block h-12" />
       
@@ -54,7 +54,7 @@ export default function PromoBanner() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="fixed left-0 right-0 overflow-hidden
-                       top-[88px] z-40
+                       top-[96px] z-40
                        sm:top-0 sm:z-[60]"
           >
             <a 
