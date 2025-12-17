@@ -11,6 +11,7 @@ import FAQ from '@/components/FAQ'
 import Footer from '@/components/Footer'
 import ApiStatus from '@/components/ApiStatus'
 import FloatingCTA from '@/components/FloatingCTA'
+import PromoBanner from '@/components/PromoBanner'
 
 export default function Home() {
   const [apiStatus, setApiStatus] = useState<'checking' | 'connected' | 'error'>('checking')
@@ -46,6 +47,9 @@ export default function Home() {
       <main className="min-h-screen relative" itemScope itemType="https://schema.org/WebPage">
         {/* Header */}
         <Header />
+        
+        {/* Banner promocional - entre Header y Hero */}
+        <PromoBanner />
         
         {/* API Status */}
         <ApiStatus status={apiStatus} onStatusChange={setApiStatus} />

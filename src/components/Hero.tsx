@@ -23,7 +23,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-28">
+    <section className="relative min-h-screen flex items-center justify-center pt-8 sm:pt-28">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 opacity-90" />
       
