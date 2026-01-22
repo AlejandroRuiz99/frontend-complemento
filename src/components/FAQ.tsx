@@ -27,8 +27,8 @@ const faqData: FAQItem[] = [
     category: "requisitos"
   },
   {
-    question: "¿Cómo se calcula el complemento de paternidad en 2025?",
-    answer: "En 2025 aplica el Período 2: se reciben 35,90€ por cada hijo, con un máximo de 4 hijos (143,60€ máximo). El importe es fijo independiente del importe de la pensión.",
+    question: "¿Cómo se calcula el complemento de paternidad en 2026?",
+    answer: "En 2026 aplica el Período 2: se reciben 35,90€ por cada hijo, con un máximo de 4 hijos (143,60€ máximo). El importe es fijo independiente del importe de la pensión.",
     category: "calculo"
   },
   {

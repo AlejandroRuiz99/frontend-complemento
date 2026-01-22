@@ -15,7 +15,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-[var(--promo-banner-height,0px)] left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-800 transition-[top] duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-800">
       <nav className="container-legal">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}

@@ -15,11 +15,11 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Calcular Complemento de Paternidad 2025 | Calculadora Oficial GRATIS',
-  description: '🔥 Calculadora GRATUITA del complemento de paternidad 2025. Verifica elegibilidad, calcula importe exacto y atrasos. Herramienta oficial española actualizada. ¡Descubre cuánto te corresponde AHORA!',
+  title: 'Calcular Complemento de Paternidad 2026 | Calculadora Oficial GRATIS',
+  description: '🔥 Calculadora GRATUITA del complemento de paternidad 2026. Verifica elegibilidad, calcula importe exacto y atrasos. Herramienta oficial española actualizada. ¡Descubre cuánto te corresponde AHORA!',
   keywords: [
     'calcular complemento paternidad',
-    'complemento paternidad 2025',
+    'complemento paternidad 2026',
     'calculadora complemento paternidad',
     'como calcular complemento paternidad',
     'complemento paternidad pensión',
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     canonical: 'https://calcularcomplemento.com'
   },
   openGraph: {
-    title: 'Calcular Complemento de Paternidad 2025 | Calculadora Oficial GRATIS',
-    description: '🔥 Calculadora GRATUITA del complemento de paternidad 2025. Verifica elegibilidad, calcula importe exacto y atrasos. ¡Descubre cuánto te corresponde AHORA!',
+    title: 'Calcular Complemento de Paternidad 2026 | Calculadora Oficial GRATIS',
+    description: '🔥 Calculadora GRATUITA del complemento de paternidad 2026. Verifica elegibilidad, calcula importe exacto y atrasos. ¡Descubre cuánto te corresponde AHORA!',
     type: 'website',
     locale: 'es_ES',
     url: 'https://calcularcomplemento.com',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: 'https://calcularcomplemento.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Calculadora del Complemento de Paternidad 2025'
+        alt: 'Calculadora del Complemento de Paternidad 2026'
       }
     ]
   },
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@compromisolegal',
     creator: '@compromisolegal',
-    title: 'Calcular Complemento de Paternidad 2025 | Calculadora Oficial GRATIS',
-    description: '🔥 Calculadora GRATUITA del complemento de paternidad 2025. Verifica elegibilidad, calcula importe exacto y atrasos. ¡Descubre cuánto te corresponde AHORA!',
+    title: 'Calcular Complemento de Paternidad 2026 | Calculadora Oficial GRATIS',
+    description: '🔥 Calculadora GRATUITA del complemento de paternidad 2026. Verifica elegibilidad, calcula importe exacto y atrasos. ¡Descubre cuánto te corresponde AHORA!',
     images: ['https://calcularcomplemento.com/og-image.jpg']
   },
   verification: {
@@ -150,14 +150,14 @@ export default function RootLayout({
                   "@type": "WebPage",
                   "@id": "https://calcularcomplemento.com/#webpage",
                   "url": "https://calcularcomplemento.com",
-                  "name": "Calcular Complemento de Paternidad 2024 | Calculadora Oficial GRATIS",
+                  "name": "Calcular Complemento de Paternidad 2026 | Calculadora Oficial GRATIS",
                   "isPartOf": {
                     "@id": "https://calcularcomplemento.com/#website"
                   },
                   "about": {
                     "@id": "https://calcularcomplemento.com/#organization"
                   },
-                  "description": "Calculadora GRATUITA del complemento de paternidad 2024. Verifica elegibilidad, calcula importe exacto y atrasos. Herramienta oficial española actualizada.",
+                  "description": "Calculadora GRATUITA del complemento de paternidad 2026. Verifica elegibilidad, calcula importe exacto y atrasos. Herramienta oficial española actualizada.",
                   "breadcrumb": {
                     "@id": "https://calcularcomplemento.com/#breadcrumb"
                   },
